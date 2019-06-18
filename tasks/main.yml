@@ -5,6 +5,6 @@
     gather_subset: all
   register: l_edge_os_facts
 
-- name: debug
-  debug:
-    msg: "{{ l_edge_os_facts }}"
+- name: configure the remote device
+  edgeos_config:
+    lines: "{{ edgeos_config_lines }}"
