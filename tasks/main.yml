@@ -1,0 +1,10 @@
+---
+# tasks file for ansible-role-edgeos
+- name: collect all facts from the device
+  edgeos_facts:
+    gather_subset: all
+  register: l_edge_os_facts
+
+- name: debug
+  debug:
+    msg: "{{ l_edge_os_facts }}"
